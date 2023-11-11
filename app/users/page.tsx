@@ -11,21 +11,22 @@ export default async function Page() {
   const userData: Promise<User[]> = getAllUsers();
   const users = await userData;
   const content = (
-    <section
-      className={`${agbalumo.className} flex flex-col justify-between items-center`}
-    >
-      <Link href="/">Go to main</Link>
-      <br /> <br />
-      {users.map((user) => {
-        return (
-          <>
-            <p key={user.id}>
-              <Link href={`/users/${user.id}`}>{user.name}</Link>
-            </p>
-            <br />
-          </>
-        );
-      })}
+    <section className={agbalumo.className}>
+      <Link href="/" className="btn">
+        Go to main
+      </Link>
+      <aside className="mt-12">
+        {users.map((user) => {
+          return (
+            <>
+              <p key={user.id}>
+                <Link href={`/users/${user.id}`}>{user.name}</Link>
+              </p>
+              <br />
+            </>
+          );
+        })}
+      </aside>
     </section>
   );
   return content;

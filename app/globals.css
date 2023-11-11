@@ -6,3 +6,10 @@ body {
   background-color: black;
   color: white;
 }
+
+.btn {
+  padding: 1rem;
+  background-color: lime;
+  border: 1px solid lime;
+  border-radius: 4px;
+}

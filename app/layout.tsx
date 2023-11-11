@@ -18,7 +18,7 @@ export default function RootLayout({
         <nav className="flex items-center justify-center h-12 bg-blue-900">
           <h2 className="text-2xl">Learn Next.js</h2>
         </nav>
-        <main>
+        <main className="flex items-center justify-center text-center">
           {children}
         </main>
       </body>
