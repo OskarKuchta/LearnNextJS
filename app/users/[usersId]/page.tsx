@@ -6,22 +6,22 @@ import { Metadata } from "next";
 
 type Params = {
   params: {
-    userId: string;
+    usersId: string;
   };
 };
 export async function generateMetadata({
-  params: { userId },
+  params: { usersId },
 }: Params): Promise<Metadata> {
-  const userData: Promise<User> = getUser(userId);
+  const userData: Promise<User> = getUser(usersId);
   const user = await userData;
   return {
     title: user.name,
     description: `This is page about ${user.name}`,
   };
 }
-export default async function UserPage({ params: { userId } }: Params) {
-  const userData: Promise<User> = getUser(userId);
-  const userPostData: Promise<Post> = getUserPost(userId);
+export default async function UserPage({ params: { usersId } }: Params) {
+  const userData: Promise<User> = getUser(usersId);
+  const userPostData: Promise<Post> = getUserPost(usersId);
 
   const user = await userData;
   const post = await userPostData;
