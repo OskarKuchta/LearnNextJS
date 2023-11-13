@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function About() {
+const About = () => {
   return (
     <section className="flex flex-col justify-between items-center">
       <h1>About page</h1>
@@ -9,4 +9,6 @@ export default function About() {
       </Link>
     </section>
   );
-}
+};
+
+export default About;

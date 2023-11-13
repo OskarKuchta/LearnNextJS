@@ -1,11 +1,9 @@
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout: React.FC<Children> = ({ children }) => {
   return (
     <>
       <main>{children}</main>
     </>
   );
-}
+};
+
+export default RootLayout;

@@ -19,7 +19,7 @@ export async function generateMetadata({
     description: `This is page about ${user.name}`,
   };
 }
-export default async function UserPage({ params: { usersId } }: Params) {
+const UserPage = async ({ params: { usersId } }: Params) => {
   const userData: Promise<User> = getUser(usersId);
   const userPostData: Promise<Post> = getUserPost(usersId);
 
@@ -41,4 +41,6 @@ export default async function UserPage({ params: { usersId } }: Params) {
       </Link>
     </>
   );
-}
+};
+
+export default UserPage;

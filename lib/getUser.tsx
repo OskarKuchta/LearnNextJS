@@ -1,4 +1,4 @@
-export default async function getUser(usersId: string) {
+const getUser = async (usersId: string) => {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/users/${usersId}`
   );
@@ -6,4 +6,6 @@ export default async function getUser(usersId: string) {
   if (!res.ok) throw new Error("failed to fetch user");
 
   return res.json();
-}
+};
+
+export default getUser;

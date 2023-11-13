@@ -1,13 +1,11 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Users"
-}
+  title: "Users",
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout: React.FC<Children> = ({ children }) => {
   return <main className="mt-16">{children}</main>;
-}
+};
+
+export default RootLayout;

@@ -6,11 +6,7 @@ export const metadata: Metadata = {
   title: "Learn Next.js",
   description: "Repository for learn Next.js",
 };
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout: React.FC<Children> = ({ children }) => {
   return (
     <html lang="en">
       <Head />
@@ -24,4 +20,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

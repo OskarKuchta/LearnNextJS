@@ -1,7 +1,7 @@
 import Link from "next/link";
 import getAllUsers from "@/lib/getAllUsers";
 
-export default async function Page() {
+const Page = async () => {
   const userData: Promise<User[]> = getAllUsers();
   const users = await userData;
   const content = (
@@ -24,4 +24,6 @@ export default async function Page() {
     </section>
   );
   return content;
-}
+};
+
+export default Page;

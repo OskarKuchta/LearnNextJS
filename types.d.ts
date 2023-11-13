@@ -29,3 +29,7 @@ type User = {
         bs: string;
     };
 };
+
+type Children = {
+    children: React.ReactNode;
+}
