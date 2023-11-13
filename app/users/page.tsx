@@ -13,7 +13,7 @@ const Page = async () => {
         {users.map((user) => {
           return (
             <div key={user.id}>
-              <p>
+              <p className="mt-6">
                 <Link href={`/users/${user.id}`}>{user.name}</Link>
               </p>
               <br />
