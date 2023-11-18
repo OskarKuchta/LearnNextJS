@@ -4,9 +4,7 @@ const getAllUsers = async () => {
       revalidate: 86400,
     },
   });
-  if (!res.ok) {
-    throw new Error("Problem with fetching data");
-  }
+  if (!res.ok) undefined;
   return res.json();
 };
 
